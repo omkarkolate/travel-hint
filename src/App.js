@@ -36,7 +36,9 @@ export default function App() {
       </p>
       <div>
         {Object.keys(travelDb).map((type) => (
-          <button onClick={() => genreClickHandler(type)}>{type}</button>
+          <button key={type} onClick={() => genreClickHandler(type)}>
+            {type}
+          </button>
         ))}
       </div>
 
