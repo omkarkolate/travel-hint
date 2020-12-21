@@ -1,16 +1,27 @@
+:root {
+  --color-primary: #61dafb;
+}
+
+body {
+  background-color: #20232a;
+  color: white;
+}
 .App {
   font-family: sans-serif;
   text-align: center;
 }
 
 h1 {
-  color: blueviolet;
+  color: var(--color-primary);
 }
 
 button {
   margin: 0.5rem;
   padding: 0.5rem;
   font-size: 1.2rem;
+  background-color: var(--color-primary);
+  border: 1px solid white;
+  border-radius: 1rem;
 }
 
 li {
@@ -18,5 +29,13 @@ li {
   margin: 0.5rem;
   padding: 0.5rem;
   font-size: 1.2rem;
-  border: 1px solid black;
+  border: 1px solid #61dafb;
+  border-radius: 1rem;
+}
+
+ul {
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
 }

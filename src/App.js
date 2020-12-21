@@ -24,19 +24,17 @@ const travelDb = {
 export default function App() {
   const [selectedType, setType] = useState("historical");
 
-  function genreClickHandler(type) {
+  function genrelClickHandler(type) {
     setType(type);
   }
 
   return (
     <div className="App">
       <h1>Travel Hint</h1>
-      <p style={{ fontSize: "smaller" }}>
-        Checkout my favorite travel places. Select a type to get started
-      </p>
+      <p>Checkout my favorite travel places. Select a type to get started</p>
       <div>
         {Object.keys(travelDb).map((type) => (
-          <button key={type} onClick={() => genreClickHandler(type)}>
+          <button key={type} onClick={() => genrelClickHandler(type)}>
             {type}
           </button>
         ))}
@@ -45,7 +43,7 @@ export default function App() {
       <hr />
 
       <div>
-        <ul style={{ paddingInlineStart: "0" }}>
+        <ul>
           {travelDb[selectedType].map((place) => (
             <li key={place.name}>
               <div> {place.name} </div>
